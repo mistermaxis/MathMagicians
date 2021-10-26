@@ -1,4 +1,5 @@
 import './App.css';
+import Calculator from './components/calculator.js';
 
 function App() {
   return (
@@ -6,6 +7,7 @@ function App() {
       <header className="App-header">
         <h1>Math Magicians</h1>
       </header>
+      <Calculator/>
     </div>
   );
 }
