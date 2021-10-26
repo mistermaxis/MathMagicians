@@ -1,5 +1,5 @@
 import './App.css';
-import Calculator from './components/calculator.js';
+import Calculator from './components/calculator.js'; // eslint-disable-line no-unused-vars
 
 function App() {
   return (

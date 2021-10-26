@@ -1,21 +1,22 @@
 .calculator-container {
   max-width: 20rem;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-areas: "res res res res"
-                        "ac neg perc divide"
-                        "n7 n8 n9 mult"
-                        "n4 n5 n6 minus"
-                        "n1 n2 n3 plus"
-                        "n0 n0 dec eq";
+  grid-template-columns: repeat(4, 4rem);
+  grid-template-areas:
+    "res res res res"
+    "ac neg perc divide"
+    "n7 n8 n9 mult"
+    "n4 n5 n6 minus"
+    "n1 n2 n3 plus"
+    "n0 n0 dec eq";
 }
 
 .result {
-    grid-area: res;
-    text-align: right;
-    background-color: rgb(78, 90, 105);
-    color: lightgray;
-    padding: 0.75rem 0;
+  grid-area: res;
+  text-align: right;
+  background-color: rgb(78, 90, 105);
+  color: lightgray;
+  padding: 0.75rem 0;
 }
 
 .n0 {

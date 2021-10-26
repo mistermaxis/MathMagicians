@@ -1,12 +1,16 @@
 .App {
   min-height: 100vh;
   background-color: #282c34;
-  padding: 2rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .App-header {
   text-align: center;
   color: white;
+  padding-bottom: 1rem;
 }
 
 .App-header > h1 {
