@@ -23,8 +23,6 @@ class Calculator extends React.Component {
 
     const newResult = calculate(this.calcData, buttonName);
 
-    console.log(newResult);
-
     if (newResult.next) {
       this.setState({ result: newResult.next });
     } else if (newResult.total) {
@@ -36,8 +34,6 @@ class Calculator extends React.Component {
     this.calcData.total = newResult.total;
     this.calcData.next = newResult.next;
     this.calcData.operation = newResult.operation;
-
-    console.log(this.calcData);
   }
 
   render() { // eslint-disable-line class-methods-use-this
