@@ -1,19 +1,57 @@
 import React from 'react'; // eslint-disable-line no-unused-vars
+import calculate from '../logic/calculate.js';
 import './calculator.css';
 
 class Calculator extends React.Component {
+  calcData;
+
+  constructor(props) {
+    super(props);
+    this.state = { result: '0' };
+    this.calcData = { total: null, next: null, operation: null };
+    this.handlePress = this.handlePress.bind(this);
+  }
+
+  componentDidMount() {
+    const buttons = Array.from(document.querySelectorAll('button'));
+    buttons.forEach((button) => button.addEventListener('click', this.handlePress));
+  }
+
+  handlePress(event) {
+    const pressedButton = event.currentTarget;
+    const buttonName = pressedButton.innerText;
+
+    const newResult = calculate(this.calcData, buttonName);
+
+    console.log(newResult);
+
+    if (newResult.next) {
+      this.setState({ result: newResult.next });
+    } else if (newResult.total) {
+      this.setState({ result: newResult.total });
+    } else {
+      this.setState({ result: '0' });
+    }
+
+    this.calcData.total = newResult.total;
+    this.calcData.next = newResult.next;
+    this.calcData.operation = newResult.operation;
+
+    console.log(this.calcData);
+  }
+
   render() { // eslint-disable-line class-methods-use-this
     return (
       <div className="calculator-container">
-          <span className="result">0</span>
+          <span className="result">{this.state.result}</span>
           <button className="grey-button" type="button">AC</button>
           <button className="grey-button" type="button">+/-</button>
           <button className="grey-button" type="button">%</button>
-          <button className="orange-button" type="button">&#247;</button>
+          <button className="orange-button" type="button">÷</button>
           <button className="grey-button" type="button">7</button>
           <button className="grey-button" type="button">8</button>
           <button className="grey-button" type="button">9</button>
-          <button className="orange-button" type="button">*</button>
+          <button className="orange-button" type="button">x</button>
           <button className="grey-button" type="button">4</button>
           <button className="grey-button" type="button">5</button>
           <button className="grey-button" type="button">6</button>
