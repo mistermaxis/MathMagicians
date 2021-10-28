@@ -11,10 +11,6 @@
 - HTML, JavaScript, CSS
 - Webpack, React, Jest
 
-## Live Demo
-
-[Todo List Demo](https://github.com/mistermaxis/MathMagicians)
-
 ## Getting Started
 
 To get a local copy up and running follow these simple example steps.
