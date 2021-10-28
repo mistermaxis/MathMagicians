@@ -2,12 +2,10 @@ import React from 'react'; // eslint-disable-line no-unused-vars
 import calculate from '../logic/calculate.js';
 import './calculator.css';
 
-const Calculator = (props) => {
-  calcData;
+const Calculator = () => {
+  const [result, setResult] = useState(0);
 
   constructor(props) {
-    super(props);
-    this.state = { result: '0' };
     this.calcData = { total: null, next: null, operation: null };
     this.handlePress = this.handlePress.bind(this);
   }
