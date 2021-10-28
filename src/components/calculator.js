@@ -36,7 +36,6 @@ class Calculator extends React.Component {
     this.calcData.operation = newResult.operation;
   }
 
-  render() { // eslint-disable-line class-methods-use-this
     return (
       <div className="calculator-container">
           <span className="result">{this.state.result}</span>
@@ -61,7 +60,6 @@ class Calculator extends React.Component {
           <button className="orange-button" type="button">=</button>
       </div>
     );
-  }
 }
 
 export default Calculator;
