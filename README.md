@@ -11,17 +11,32 @@
 - HTML, JavaScript, CSS
 - Webpack, React, Jest
 
-## Live Demo
-
-[Todo List Demo](https://github.com/mistermaxis/MathMagicians)
-
 ## Getting Started
 
 To get a local copy up and running follow these simple example steps.
 
+### Prerequisites
+
+- Nodejs
+
+### Setup
+
+- Clone the repository to a folder in your PC.
+
+### Install
+
+- Navigate to the folder where you cloned the repo (eg: **Documents/MathMagicians**).
+- Once in the folder, open a terminal window from there.
+- Alternatively, you can open a terminal from a shortcut and navigate to the folder using the command `cd` (eg: `cd Documents/MathMagicians`):
+- Run `npm i` to install all the necessary dependencies.
+
 ### Usage
 
-Clone the repository and open `index.html` from the `dist` folder in a browser.
+- Run `npm start` to start a local server at `localhost:3000`.
+
+### Run tests
+
+- Run `npm test` to run tests if available.
 
 ## Authors
 
