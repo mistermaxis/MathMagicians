@@ -25,9 +25,9 @@ const Calculator = () => {
       setResult(0);
     }
 
-    this.calcData.total = newResult.total;
-    this.calcData.next = newResult.next;
-    this.calcData.operation = newResult.operation;
+    calcData.total = newResult.total;
+    calcData.next = newResult.next;
+    calcData.operation = newResult.operation;
   }
 
     return (
