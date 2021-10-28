@@ -4,9 +4,10 @@ import './calculator.css';
 
 const Calculator = () => {
   const [result, setResult] = useState(0);
+  const calcData = { total: null, next: null, operation: null };
 
   constructor(props) {
-    this.calcData = { total: null, next: null, operation: null };
+    
     this.handlePress = this.handlePress.bind(this);
   }
 
