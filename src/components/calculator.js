@@ -6,11 +6,6 @@ const Calculator = () => {
   const [result, setResult] = useState(0);
   const calcData = { total: null, next: null, operation: null };
 
-  constructor(props) {
-    
-    this.handlePress = this.handlePress.bind(this);
-  }
-
   componentDidMount() {
     const buttons = Array.from(document.querySelectorAll('button'));
     buttons.forEach((button) => button.addEventListener('click', this.handlePress));
