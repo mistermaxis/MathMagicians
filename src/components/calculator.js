@@ -32,7 +32,7 @@ const Calculator = () => {
 
     return (
       <div className="calculator-container">
-          <span className="result">{this.state.result}</span>
+          <span className="result">{result}</span>
           <button className="grey-button" type="button">AC</button>
           <button className="grey-button" type="button">+/-</button>
           <button className="grey-button" type="button">%</button>
