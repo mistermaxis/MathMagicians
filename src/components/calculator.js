@@ -15,7 +15,7 @@ const Calculator = () => {
     const pressedButton = e.currentTarget;
     const buttonName = pressedButton.innerText;
 
-    const newResult = calculate(this.calcData, buttonName);
+    const newResult = calculate(calcData, buttonName);
 
     if (newResult.next) {
       setResult(newResult.next);
