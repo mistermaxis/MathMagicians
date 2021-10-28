@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'; // eslint-disable-line no-unused-vars
+import React, { useEffect, useState } from 'react'; // eslint-disable-line no-unused-vars
 import calculate from '../logic/calculate.js';
 import './calculator.css';
 
@@ -11,8 +11,8 @@ const Calculator = () => {
     buttons.forEach((button) => button.addEventListener('click', this.handlePress));
   }, []);
 
-  handlePress(event) {
-    const pressedButton = event.currentTarget;
+  const handlePress = (e) => {
+    const pressedButton = e.currentTarget;
     const buttonName = pressedButton.innerText;
 
     const newResult = calculate(this.calcData, buttonName);
