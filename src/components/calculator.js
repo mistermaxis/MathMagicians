@@ -8,7 +8,7 @@ const Calculator = () => {
 
   useEffect(() => {
     const buttons = Array.from(document.querySelectorAll('button'));
-    buttons.forEach((button) => button.addEventListener('click', this.handlePress));
+    buttons.forEach((button) => button.addEventListener('click', handlePress));
   }, []);
 
   const handlePress = (e) => {
@@ -18,11 +18,11 @@ const Calculator = () => {
     const newResult = calculate(this.calcData, buttonName);
 
     if (newResult.next) {
-      this.setState({ result: newResult.next });
+      setResult(newResult.next);
     } else if (newResult.total) {
-      this.setState({ result: newResult.total });
+      setResult(newResult.total);
     } else {
-      this.setState({ result: '0' });
+      setResult(0);
     }
 
     this.calcData.total = newResult.total;
