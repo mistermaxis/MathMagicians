@@ -1,4 +1,4 @@
-import CalculatorComponent from '../components/calculator.js';
+import CalculatorComponent from '../components/calculator.js'; // eslint-disable-line no-unused-vars
 import './calculator.css';
 
 function Calculator() {

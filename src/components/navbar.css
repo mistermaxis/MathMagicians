@@ -1,5 +1,6 @@
 menu {
   padding: 0;
+
   --link-color: rgb(0, 96, 206);
 }
 
@@ -16,12 +17,12 @@ menu {
   border-right: 0.1rem solid var(--link-color);
 }
 
+.main-menu > :last-child {
+  border: none;
+}
+
 .main-menu > a :hover,
 .main-menu > a :active,
 .main-menu > a :visited {
   color: var(--link-color);
-}
-
-.main-menu > :last-child {
-  border: none;
 }
