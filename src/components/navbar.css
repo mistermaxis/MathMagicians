@@ -7,7 +7,7 @@ menu {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 0.25rem;
+  padding: 0 0.5rem;
 }
 
 .main-menu > * {
@@ -24,4 +24,5 @@ menu {
 
 .main-menu > :last-child {
   border: none;
+  padding: 0;
 }
