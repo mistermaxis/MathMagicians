@@ -1,67 +1,59 @@
-import React from 'react'; // eslint-disable-line no-unused-vars
+import React, { useEffect, useState } from 'react'; // eslint-disable-line no-unused-vars
 import calculate from '../logic/calculate.js';
 import './calculator.css';
 
-class CalculatorComponent extends React.Component {
-  calcData;
+function CalculatorComponent {
+  const [result, setResult] = useState(0);
+  const calcData = { total: null, next: null, operation: null };
 
-  constructor(props) {
-    super(props);
-    this.state = { result: '0' };
-    this.calcData = { total: null, next: null, operation: null };
-    this.handlePress = this.handlePress.bind(this);
-  }
-
-  componentDidMount() {
-    const buttons = Array.from(document.querySelectorAll('button'));
-    buttons.forEach((button) => button.addEventListener('click', this.handlePress));
-  }
-
-  handlePress(event) {
-    const pressedButton = event.currentTarget;
+  const handlePress = (e) => {
+    const pressedButton = e.currentTarget;
     const buttonName = pressedButton.innerText;
 
-    const newResult = calculate(this.calcData, buttonName);
+    const newResult = calculate(calcData, buttonName);
 
     if (newResult.next) {
-      this.setState({ result: newResult.next });
+      setResult(newResult.next);
     } else if (newResult.total) {
-      this.setState({ result: newResult.total });
+      setResult(newResult.total);
     } else {
-      this.setState({ result: '0' });
+      setResult(0);
     }
 
-    this.calcData.total = newResult.total;
-    this.calcData.next = newResult.next;
-    this.calcData.operation = newResult.operation;
-  }
+    calcData.total = newResult.total;
+    calcData.next = newResult.next;
+    calcData.operation = newResult.operation;
+  };
 
-  render() { // eslint-disable-line class-methods-use-this
-    return (
-      <div className="calculator-container">
-          <span className="result">{this.state.result}</span>
-          <button className="grey-button" type="button">AC</button>
-          <button className="grey-button" type="button">+/-</button>
-          <button className="grey-button" type="button">%</button>
-          <button className="orange-button" type="button">÷</button>
-          <button className="grey-button" type="button">7</button>
-          <button className="grey-button" type="button">8</button>
-          <button className="grey-button" type="button">9</button>
-          <button className="orange-button" type="button">x</button>
-          <button className="grey-button" type="button">4</button>
-          <button className="grey-button" type="button">5</button>
-          <button className="grey-button" type="button">6</button>
-          <button className="orange-button" type="button">-</button>
-          <button className="grey-button" type="button">1</button>
-          <button className="grey-button" type="button">2</button>
-          <button className="grey-button" type="button">3</button>
-          <button className="orange-button" type="button">+</button>
-          <button className="n0 grey-button" type="button">0</button>
-          <button className="grey-button" type="button">.</button>
-          <button className="orange-button" type="button">=</button>
-      </div>
-    );
-  }
-}
+  useEffect(() => {
+    const buttons = Array.from(document.querySelectorAll('button'));
+    buttons.forEach((button) => button.addEventListener('click', handlePress));
+  }, []);
+
+  return (
+    <div className="calculator-container">
+        <span className="result">{result}</span>
+        <button className="grey-button" type="button">AC</button>
+        <button className="grey-button" type="button">+/-</button>
+        <button className="grey-button" type="button">%</button>
+        <button className="orange-button" type="button">÷</button>
+        <button className="grey-button" type="button">7</button>
+        <button className="grey-button" type="button">8</button>
+        <button className="grey-button" type="button">9</button>
+        <button className="orange-button" type="button">x</button>
+        <button className="grey-button" type="button">4</button>
+        <button className="grey-button" type="button">5</button>
+        <button className="grey-button" type="button">6</button>
+        <button className="orange-button" type="button">-</button>
+        <button className="grey-button" type="button">1</button>
+        <button className="grey-button" type="button">2</button>
+        <button className="grey-button" type="button">3</button>
+        <button className="orange-button" type="button">+</button>
+        <button className="n0 grey-button" type="button">0</button>
+        <button className="grey-button" type="button">.</button>
+        <button className="orange-button" type="button">=</button>
+    </div>
+  );
+};
 
 export default CalculatorComponent;
