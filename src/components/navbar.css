@@ -1,3 +1,27 @@
 menu {
   padding: 0;
+  --link-color: rgb(0, 96, 206);
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 0.25rem;
+}
+
+.main-menu > * {
+  color: var(--link-color);
+  padding: 0.25rem;
+  border-right: 0.1rem solid var(--link-color);
+}
+
+.main-menu > a :hover,
+.main-menu > a :active,
+.main-menu > a :visited {
+  color: var(--link-color);
+}
+
+.main-menu > :last-child {
+  border: none;
 }
