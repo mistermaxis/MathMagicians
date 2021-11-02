@@ -2,7 +2,7 @@ import React from 'react'; // eslint-disable-line no-unused-vars
 import calculate from '../logic/calculate.js';
 import './calculator.css';
 
-class Calculator extends React.Component {
+class CalculatorComponent extends React.Component {
   calcData;
 
   constructor(props) {
@@ -64,4 +64,4 @@ class Calculator extends React.Component {
   }
 }
 
-export default Calculator;
+export default CalculatorComponent;

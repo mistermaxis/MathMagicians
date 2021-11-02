@@ -1,7 +1,15 @@
+import CalculatorComponent from '../components/calculator.js';
+import './calculator.css';
+
 function Calculator() {
   return (
-    <div>
-      <h1>Calculator</h1>
+    <div className="calculator">
+      <div>
+        <h3>Let's do some math!</h3>
+      </div>
+      <div>
+        <CalculatorComponent />
+      </div>
     </div>
   );
 }
