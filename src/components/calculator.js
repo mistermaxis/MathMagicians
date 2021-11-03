@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'; // eslint-disable-line no-un
 import calculate from '../logic/calculate.js';
 import './calculator.css';
 
-const Calculator = () => {
+function CalculatorComponent() {
   const [result, setResult] = useState(0);
   const calcData = { total: null, next: null, operation: null };
 
@@ -54,6 +54,6 @@ const Calculator = () => {
         <button className="orange-button" type="button">=</button>
     </div>
   );
-};
+}
 
-export default Calculator;
+export default CalculatorComponent;
