@@ -16,4 +16,22 @@ describe("Calculate operations", () => {
 
     expect(testResult.total).toBe("-2");
   });
+
+
+  it("multiply two integers", () => {
+    const testData = { total: 10, next: 5, operation: "x" };
+
+    const testResult = calculate(testData, "=");
+
+    expect(testResult.total).toBe("50");
+  });
+  
+
+  it("divides two integers", () => {
+    const testData = { total: 10, next: 5, operation: "÷" };
+
+    const testResult = calculate(testData, "=");
+
+    expect(testResult.total).toBe("10");
+  });
 });
