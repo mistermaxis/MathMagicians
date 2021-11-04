@@ -32,6 +32,6 @@ describe("Calculate operations", () => {
 
     const testResult = calculate(testData, "=");
 
-    expect(testResult.total).toBe("10");
+    expect(testResult.total).toBe("2");
   });
 });
