@@ -18,4 +18,13 @@ describe('Operate tests', () => {
 
     expect(result).toBe('125');
   });
+
+  it('multiplies an integer', () => {
+    const numberOne = 225;
+    const numberTwo = 2;
+
+    const result = operate(numberOne, numberTwo, 'x');
+
+    expect(result).toBe('450');
+  });
 });
