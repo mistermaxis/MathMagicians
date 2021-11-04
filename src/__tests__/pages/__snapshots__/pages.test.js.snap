@@ -1,0 +1,164 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Components match the screenshots renders Calculator 1`] = `
+<div
+  className="calculator"
+>
+  <div>
+    <h3>
+      Let's do some math!
+    </h3>
+  </div>
+  <div>
+    <div
+      className="calculator-container"
+    >
+      <span
+        className="result"
+      >
+        0
+      </span>
+      <button
+        className="grey-button"
+        type="button"
+      >
+        AC
+      </button>
+      <button
+        className="grey-button"
+        type="button"
+      >
+        +/-
+      </button>
+      <button
+        className="grey-button"
+        type="button"
+      >
+        %
+      </button>
+      <button
+        className="orange-button"
+        type="button"
+      >
+        ÷
+      </button>
+      <button
+        className="grey-button"
+        type="button"
+      >
+        7
+      </button>
+      <button
+        className="grey-button"
+        type="button"
+      >
+        8
+      </button>
+      <button
+        className="grey-button"
+        type="button"
+      >
+        9
+      </button>
+      <button
+        className="orange-button"
+        type="button"
+      >
+        x
+      </button>
+      <button
+        className="grey-button"
+        type="button"
+      >
+        4
+      </button>
+      <button
+        className="grey-button"
+        type="button"
+      >
+        5
+      </button>
+      <button
+        className="grey-button"
+        type="button"
+      >
+        6
+      </button>
+      <button
+        className="orange-button"
+        type="button"
+      >
+        -
+      </button>
+      <button
+        className="grey-button"
+        type="button"
+      >
+        1
+      </button>
+      <button
+        className="grey-button"
+        type="button"
+      >
+        2
+      </button>
+      <button
+        className="grey-button"
+        type="button"
+      >
+        3
+      </button>
+      <button
+        className="orange-button"
+        type="button"
+      >
+        +
+      </button>
+      <button
+        className="n0 grey-button"
+        type="button"
+      >
+        0
+      </button>
+      <button
+        className="grey-button"
+        type="button"
+      >
+        .
+      </button>
+      <button
+        className="orange-button"
+        type="button"
+      >
+        =
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Components match the screenshots renders Home 1`] = `
+<div
+  className="home"
+>
+  <h3>
+    Welcome to our page!
+  </h3>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  </p>
+</div>
+`;
+
+exports[`Components match the screenshots renders Quote 1`] = `
+<div
+  className="quote"
+>
+  <h4>
+    Mathematics is not about numbers, equations, computations. It's about understanding. –William Paul Thurston
+  </h4>
+</div>
+`;

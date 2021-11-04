@@ -27,4 +27,13 @@ describe('Operate tests', () => {
 
     expect(result).toBe('450');
   });
+
+  it("divides an integer", () => {
+    const numberOne = 20;
+    const numberTwo = 5;
+
+    const result = operate(numberOne, numberTwo, "÷");
+
+    expect(result).toBe("4");
+  });
 });
