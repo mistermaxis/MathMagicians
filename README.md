@@ -9,6 +9,7 @@
 ## Live Demo
 
 - [Netlify](https://mistermaxis-mathmagicians.netlify.app/)
+- [Heroku](https://mistermaxis-math-magicians.herokuapp.com/)
 
 ## Built With
 
