@@ -6,6 +6,10 @@
 
 ![screenshot](./app_screenshot.png)
 
+## Live Demo
+
+- [Netlify](https://mistermaxis-mathmagicians.netlify.app/)
+
 ## Built With
 
 - HTML, JavaScript, CSS
