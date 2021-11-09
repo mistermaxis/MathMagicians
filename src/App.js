@@ -1,25 +1,32 @@
-import logo from './logo.svg';
+import React from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'; // eslint-disable-line no-unused-vars
 import './App.css';
+import NavBar from './components/navbar.js'; // eslint-disable-line no-unused-vars
+import Home from './pages/home.js'; // eslint-disable-line no-unused-vars
+import Calculator from './pages/calculator.js'; // eslint-disable-line no-unused-vars
+import Quote from './pages/quote.js'; // eslint-disable-line no-unused-vars
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  render() { // eslint-disable-line class-methods-use-this
+    return (
+      <Router>
+        <div className="App">
+          <NavBar />
+          <Switch>
+            <Route exact path="/">
+              <Home />
+            </Route>
+            <Route exact path="/calculator">
+              <Calculator />
+            </Route>
+            <Route exact path="/quote">
+              <Quote />
+            </Route>
+          </Switch>
+        </div>
+      </Router>
+    );
+  }
 }
 
 export default App;
