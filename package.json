@@ -8,6 +8,7 @@
     "@testing-library/user-event": "^12.8.3",
     "big.js": "^6.1.1",
     "bindings": "^1.5.0",
+    "create-react-app": "^4.0.3",
     "nan": "^2.15.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -17,8 +18,8 @@
     "web-vitals": "^1.1.2"
   },
   "scripts": {
-    "start": "react-scripts --openssl-legacy-provider start",
-    "build": "react-scripts --openssl-legacy-provider build",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
